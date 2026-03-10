@@ -1,0 +1,169 @@
+/* Task 1 specific styles */
+
+/* 1. Universal Selector (already in style.css but redefined here for context) */
+* {
+    box-sizing: border-box;
+}
+
+/* 2. Element Selector */
+h2 {
+    color: var(--secondary-color);
+    margin: 30px 0 15px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+}
+
+/* 3. Class Selector */
+.selector-section {
+    background: white;
+    padding: 24px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 24px;
+}
+
+/* 4. ID Selector */
+#main-header {
+    background-color: var(--white);
+    padding: 20px;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow-sm);
+}
+
+/* 5. Grouping Selector / Multiple Elements */
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+}
+
+/* --- Attribute Selectors --- */
+/* 1. Exact attribute */
+input[required] {
+    border: 2px solid orange;
+}
+
+/* 2. Exact attribute value */
+input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* 3. Partial or specific value matching */
+a[target="_blank"] {
+    background-color: var(--bg-light);
+    padding: 5px 10px;
+    border: 1px dashed var(--text-light);
+    border-radius: 4px;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+div[title*="box"] {
+    background-color: var(--bg-light);
+    padding: 15px;
+    border: 1px solid var(--text-light);
+    margin: 10px 0;
+}
+
+/* --- Combinators --- */
+/* 1. Descendant (space) */
+.combinators div p {
+    color: #555;
+    font-style: italic;
+}
+
+/* 2. Child (>) */
+.child>p {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* 3. Adjacent Sibling (+) */
+.sibling-head+p {
+    background-color: #e2e8f0;
+    padding: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+/* 4. General Sibling (~) */
+.sibling-head~p {
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
+/* --- Pseudo-classes --- */
+/* 1. :hover */
+.box-demo:hover {
+    background-color: var(--accent-color);
+    color: white;
+    cursor: pointer;
+}
+
+/* 2. :focus */
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(67, 97, 238, 0.5);
+}
+
+/* 3. :checked */
+input[type="checkbox"]:checked+label {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* 4. Structural pseudo-classes (:first-child, :last-child, :nth-child) */
+.list-demo li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.list-demo li:first-child {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.list-demo li:last-child {
+    border-bottom: none;
+}
+
+.list-demo li:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* --- Pseudo-elements --- */
+/* 1. ::before and ::after */
+.special-text::before {
+    content: "✨ ";
+}
+
+.special-text::after {
+    content: " ✨";
+}
+
+/* 2. ::first-letter */
+.special-text::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    font-family: var(--font-heading);
+    float: left;
+    margin-right: 5px;
+    line-height: 1;
+}
+
+/* 3. ::selection */
+::selection {
+    background-color: var(--accent-color);
+    color: white;
+}

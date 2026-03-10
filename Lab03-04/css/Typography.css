@@ -1,0 +1,186 @@
+/* Task 2 Typography Styles */
+
+typography-page {
+    /* Define base font rules that apply globally in this task */
+}
+
+.typo-section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-sm);
+}
+
+.typo-section h2 {
+    color: var(--primary-color);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* 1. Font Families */
+.font-outfit {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+}
+
+.font-inter {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+}
+
+.font-playfair {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+}
+
+/* 2. Font Sizes */
+.size-px {
+    font-size: 18px;
+}
+
+.size-em {
+    font-size: 1.5em;
+    /* 1.5 * 20px (parent) = 30px */
+}
+
+.size-rem {
+    font-size: 1.5rem;
+    /* 1.5 * root html font size (usually 16px) = 24px */
+}
+
+.size-percent {
+    font-size: 120%;
+}
+
+/* 3. Text Alignment */
+.align-box p {
+    background: var(--bg-light);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-justify {
+    text-align: justify;
+}
+
+/* 4. Text Decoration and Transformation */
+.text-dec-trans p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.dec-underline {
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+}
+
+.dec-line-through {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.dec-overline {
+    text-decoration: overline;
+}
+
+.trans-uppercase {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.trans-lowercase {
+    text-transform: lowercase;
+}
+
+.trans-capitalize {
+    text-transform: capitalize;
+}
+
+/* 5. Text Shadows */
+.text-shadows h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.shadow-basic {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.shadow-blur {
+    text-shadow: 0px 4px 10px rgba(67, 97, 238, 0.6);
+    color: var(--primary-color);
+}
+
+.shadow-glowing {
+    color: #fff;
+    background-color: #333;
+    /* dark background for glow visibility */
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px var(--accent-color), 0 0 30px var(--accent-color);
+}
+
+.shadow-3d {
+    color: #fff;
+    text-shadow:
+        1px 1px 0 #ccc,
+        2px 2px 0 #c9c9c9,
+        3px 3px 0 #bbb,
+        4px 4px 0 #b9b9b9,
+        5px 5px 0 #aaa,
+        6px 6px 1px rgba(0, 0, 0, .1),
+        0 0 5px rgba(0, 0, 0, .1),
+        1px 1px 3px rgba(0, 0, 0, .3),
+        3px 3px 5px rgba(0, 0, 0, .2),
+        5px 5px 10px rgba(0, 0, 0, .25),
+        10px 10px 10px rgba(0, 0, 0, .2),
+        20px 20px 20px rgba(0, 0, 0, .15);
+}
+
+/* 6. Text Spacing & Layout */
+.line-height-demo {
+    line-height: 2;
+    /* highly readable */
+    margin-bottom: 15px;
+}
+
+.letter-spacing-demo {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.word-spacing-demo {
+    word-spacing: 15px;
+}
+
+.text-indent-demo {
+    text-indent: 50px;
+}
+
+.overflow-demo {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: var(--bg-light);
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    margin-top: 15px;
+}

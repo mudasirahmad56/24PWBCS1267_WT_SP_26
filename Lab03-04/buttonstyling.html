@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5: Button Styling Collection</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/task5.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container buttons-page">
+        <a href="index.html" class="back-nav">&larr; Back to Home</a>
+
+        <header class="task-header main-header">
+            <h1>Task 5: Button Styling Collection</h1>
+            <p>A variety of button states, sizes, colors, and shadow/gradient effects.</p>
+        </header>
+
+        <section class="btn-section">
+            <h2>1. Colors & Basic Styles</h2>
+            <div class="btn-group">
+                <button class="btn btn-primary">Primary Button</button>
+                <button class="btn btn-secondary">Secondary Button</button>
+                <button class="btn btn-success">Success</button>
+                <button class="btn btn-danger">Danger</button>
+                <button class="btn btn-outline">Outline Button</button>
+            </div>
+        </section>
+
+        <section class="btn-section">
+            <h2>2. Sizes & Shapes</h2>
+            <div class="btn-group align-items-center">
+                <button class="btn btn-primary btn-sm">Small</button>
+                <button class="btn btn-primary">Default</button>
+                <button class="btn btn-primary btn-lg">Large Button</button>
+
+                <button class="btn btn-secondary btn-rounded">Rounded Shape</button>
+                <button class="btn btn-danger btn-circle">X</button>
+            </div>
+        </section>
+
+        <section class="btn-section">
+            <h2>3. Shadow & Gradient Backgrounds</h2>
+            <div class="btn-group">
+                <button class="btn btn-shadow">Floating Shadow</button>
+                <button class="btn btn-gradient-1">Gradient Orange</button>
+                <button class="btn btn-gradient-2">Gradient Purple</button>
+                <button class="btn btn-neon">Neon Glow</button>
+            </div>
+        </section>
+
+        <section class="btn-section">
+            <h2>4. States (Hover, Focus, Disabled)</h2>
+            <div class="btn-group align-items-center">
+                <button class="btn btn-primary" title="Hover over me">Hover Me</button>
+                <button class="btn btn-primary btn-focus">Focus Simulated</button>
+                <button class="btn btn-secondary" disabled>Disabled Button</button>
+                <button class="btn btn-gradient-1" disabled>Disabled Gradient</button>
+            </div>
+            <p style="margin-top:20px; color:var(--text-light); font-size: 0.9rem;">
+                * Press Tab to cycle through focus states interactively.
+            </p>
+        </section>
+
+        <section class="btn-section">
+            <h2>5. Push & 3D Transition Effects</h2>
+            <div class="btn-group">
+                <button class="btn btn-3d">3D Push Button</button>
+                <button class="btn btn-slide-fill">Slide Fill Background</button>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

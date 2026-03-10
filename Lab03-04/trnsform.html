@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 9: CSS Transform Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/task9.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container transform-page">
+        <a href="index.html" class="back-nav">&larr; Back to Home</a>
+
+        <header class="task-header main-header">
+            <h1>Task 9: CSS Transform Gallery</h1>
+            <p>2D/3D Rotations, scales, translations, origin manipulation, and combinations.</p>
+        </header>
+
+        <section class="transform-section">
+            <h2>1. Basic 2D Transforms</h2>
+            <div class="tf-grid">
+                <div class="tf-box-container">
+                    <div class="tf-box tf-rotate">Rotate 45deg</div>
+                </div>
+                <div class="tf-box-container">
+                    <div class="tf-box tf-scale">Scale 1.2</div>
+                </div>
+                <div class="tf-box-container">
+                    <div class="tf-box tf-translate">Translate Y</div>
+                </div>
+                <div class="tf-box-container">
+                    <div class="tf-box tf-skew">Skew X 15deg</div>
+                </div>
+            </div>
+            <p class="hint">Hover over the boxes to see the transformation.</p>
+        </section>
+
+        <section class="transform-section">
+            <h2>2. Transform Origin Demonstrations</h2>
+            <div class="tf-grid">
+                <div class="tf-box-container">
+                    <div class="tf-box origin-center">Center (Default) Rotate</div>
+                </div>
+                <div class="tf-box-container">
+                    <div class="tf-box origin-top-left">Top-Left Rotate</div>
+                </div>
+                <div class="tf-box-container">
+                    <div class="tf-box origin-bottom-right">Bottom-Right Rotate</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="transform-section">
+            <h2>3. 3D Transforms</h2>
+            <div class="tf-grid perspective-container">
+                <div class="tf-box-container">
+                    <div class="tf-box tf-rotateX">Rotate X-Axis 60deg</div>
+                </div>
+                <div class="tf-box-container">
+                    <div class="tf-box tf-rotateY">Rotate Y-Axis 60deg</div>
+                </div>
+                <div class="tf-box-container">
+                    <div class="tf-box tf-rotate3d">Rotate 3D Space</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="transform-section">
+            <h2>4. Combined Transformations</h2>
+            <div class="tf-grid">
+                <div class="tf-box-container">
+                    <div class="tf-box tf-combined">Rotate + Scale + Translate</div>
+                </div>
+                <div class="tf-box-container card-flip-container">
+                    <div class="card-flipper">
+                        <div class="card-front">Hover to Flip</div>
+                        <div class="card-back">Hello! (Back)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>

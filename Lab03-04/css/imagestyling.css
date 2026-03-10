@@ -1,0 +1,182 @@
+/* Task 4 Image Styling Portfolio */
+
+.image-gallery-page .gallery-section {
+    background: #fff;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-sm);
+}
+
+.gallery-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--bg-light);
+    padding-bottom: 10px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.image-wrapper {
+    text-align: center;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+    object-fit: cover;
+}
+
+/* 1. Shapes, Borders & Shadows */
+.img-rounded {
+    border-radius: 20px;
+}
+
+.img-circular {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+
+.img-bordered-shadow {
+    border: 8px solid white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+/* 2. CSS Filters */
+.filter-grayscale {
+    filter: grayscale(100%);
+    transition: var(--transition);
+}
+
+.filter-grayscale:hover {
+    filter: grayscale(0%);
+}
+
+.filter-blur {
+    filter: blur(4px);
+    transition: var(--transition);
+}
+
+.filter-blur:hover {
+    filter: blur(0);
+}
+
+.filter-sepia {
+    filter: sepia(100%);
+    transition: var(--transition);
+}
+
+.filter-sepia:hover {
+    filter: sepia(0);
+}
+
+.filter-contrast {
+    filter: contrast(150%) brightness(120%);
+}
+
+/* 3. Hover Effects and Overlays */
+.hover-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    height: 300px;
+}
+
+.hover-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.hover-zoom {
+    transform: scale(1);
+}
+
+.hover-container:hover .hover-zoom {
+    transform: scale(1.1);
+}
+
+.hover-color {
+    filter: grayscale(100%);
+}
+
+.hover-container:hover .hover-color {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    /* combine slight zoom */
+}
+
+/* Overlays */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(67, 97, 238, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.hover-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--font-heading);
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.hover-container:hover .overlay-text {
+    transform: translateY(0);
+}
+
+/* Bottom Slide Overlay variation */
+.bottom-slide {
+    top: auto;
+    bottom: 0;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    opacity: 1;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.hover-container:hover .bottom-slide {
+    transform: translateY(0);
+}
+
+.hover-container:hover .bottom-slide .overlay-text {
+    font-size: 1.2rem;
+    color: #fff;
+    transform: translateY(10px);
+}

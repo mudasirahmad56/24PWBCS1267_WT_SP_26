@@ -1,0 +1,166 @@
+/* Task 9 Transform Gallery Styles */
+
+.transform-section {
+    background: #fff;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-sm);
+}
+
+.transform-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--bg-light);
+    padding-bottom: 10px;
+}
+
+.hint {
+    margin-top: 20px;
+    color: var(--text-light);
+    text-align: center;
+    font-style: italic;
+}
+
+.tf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    padding: 20px 0;
+}
+
+/* Base Box */
+.tf-box-container {
+    width: 200px;
+    height: 150px;
+    border: 2px dashed #cbd5e1;
+    /* shows original position */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    /* needed for 3D inside */
+}
+
+.tf-box {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    padding: 10px;
+}
+
+/* 1. 2D Transforms */
+.tf-box-container:hover .tf-rotate {
+    transform: rotate(45deg);
+}
+
+.tf-box-container:hover .tf-scale {
+    transform: scale(1.2);
+}
+
+.tf-box-container:hover .tf-translate {
+    transform: translateY(-20px);
+}
+
+.tf-box-container:hover .tf-skew {
+    transform: skewX(15deg);
+}
+
+/* 2. Transform Origin */
+.origin-center {
+    transform-origin: center;
+}
+
+.tf-box-container:hover .origin-center {
+    transform: rotate(45deg);
+}
+
+.origin-top-left {
+    transform-origin: top left;
+}
+
+.tf-box-container:hover .origin-top-left {
+    transform: rotate(45deg);
+}
+
+.origin-bottom-right {
+    transform-origin: bottom right;
+}
+
+.tf-box-container:hover .origin-bottom-right {
+    transform: rotate(-45deg);
+}
+
+/* 3. 3D Transforms */
+.tf-box-container:hover .tf-rotateX {
+    transform: rotateX(60deg);
+}
+
+.tf-box-container:hover .tf-rotateY {
+    transform: rotateY(60deg);
+}
+
+.tf-box-container:hover .tf-rotate3d {
+    transform: rotate3d(1, 1, 1, 45deg);
+}
+
+/* 4. Combined and advanced */
+.tf-box-container:hover .tf-combined {
+    transform: translateY(-20px) scale(1.1) rotate(15deg);
+    background: linear-gradient(135deg, var(--accent-color), #ff0a54);
+}
+
+/* Card Flip 3D Example */
+.card-flip-container {
+    perspective: 1000px;
+}
+
+.card-flipper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+    /* Allows children to hold 3D rotations */
+}
+
+.card-flip-container:hover .card-flipper {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* Hides the back side when turned around */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.card-back {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    transform: rotateY(180deg);
+    /* Pre-rotate back side */
+}

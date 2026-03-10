@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8: Navigation Menu Styling</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/task8.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container nav-page">
+        <a href="index.html" class="back-nav">&larr; Back to Home</a>
+
+        <header class="task-header main-header">
+            <h1>Task 8: Navigation Menu Styling</h1>
+            <p>Showcasing horizontal, vertical, dropdowns, states, and responsive mechanics.</p>
+        </header>
+
+        <section class="nav-section">
+            <h2>1. Horizontal Navigation (with Dropdown)</h2>
+            <nav class="navbar-horizontal">
+                <div class="nav-brand">Logo</div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link">Services ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">SEO Optimization</a></li>
+                            <li><a href="#">App Dev</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="nav-section">
+            <h2>2. Vertical Navigation Layout</h2>
+            <div class="sidebar-layout">
+                <nav class="navbar-vertical">
+                    <div class="nav-brand-vert">Dashboard</div>
+                    <ul class="nav-menu-vert">
+                        <li class="nav-item-vert"><a href="#" class="nav-link-vert active">Overview</a></li>
+                        <li class="nav-item-vert"><a href="#" class="nav-link-vert">Analytics</a></li>
+                        <li class="nav-item-vert"><a href="#" class="nav-link-vert">Users</a></li>
+                        <li class="nav-item-vert"><a href="#" class="nav-link-vert">Settings</a></li>
+                    </ul>
+                </nav>
+                <div class="sidebar-content">
+                    <p>Select an item from the vertical menu.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="nav-section demo-responsive-nav">
+            <h2>3. Responsive Nav (Shrink window to see)</h2>
+            <nav class="navbar-responsive">
+                <div class="nav-brand">Brand</div>
+                <!-- Checkbox hack for mobile menu toggle without JS -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+                <ul class="nav-menu-responsive">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </nav>
+            <p class="resize-hint">Resize window below 768px to see the hamburger menu!</p>
+        </section>
+
+    </div>
+</body>
+
+</html>
