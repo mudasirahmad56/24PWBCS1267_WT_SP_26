@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography Showcase</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/task2.css">
+    <!-- 3 Google Fonts implementations -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Inter:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container typography-page">
+        <a href="index.html" class="back-nav">&larr; Back to Home</a>
+
+        <header class="task-header">
+            <h1>Task 2: Typography Showcase</h1>
+            <p>Demonstrating fonts, sizes, alignments, decorations, transformations, and shadows.</p>
+        </header>
+
+        <section class="typo-section font-families">
+            <h2>1. Google Fonts</h2>
+            <p class="font-outfit">This text applies the <strong>Outfit</strong> font (sans-serif).</p>
+            <p class="font-inter">This text applies the <strong>Inter</strong> font (sans-serif).</p>
+            <p class="font-playfair">This text applies the <strong>Playfair Display</strong> font (serif).</p>
+        </section>
+
+        <section class="typo-section font-sizes">
+            <h2>2. Font Sizes (px, em, rem, %)</h2>
+            <div class="size-container">
+                <p class="size-px">18px - Fixed size</p>
+                <div class="parent-em" style="font-size: 20px;">
+                    <p class="size-em">1.5em - Relative to parent (30px)</p>
+                </div>
+                <p class="size-rem">1.5rem - Relative to root (usually 24px)</p>
+                <p class="size-percent">120% - Relative to parent inherited size</p>
+            </div>
+        </section>
+
+        <section class="typo-section text-alignment">
+            <h2>3. Text Alignment</h2>
+            <div class="align-box">
+                <p class="align-left">Left aligned text</p>
+                <p class="align-center">Center aligned text</p>
+                <p class="align-right">Right aligned text</p>
+                <p class="align-justify">This text is justified. Notice how it stretches the text so that it aligns with
+                    both the left and right margins of the box, creating clean and sharp edges on both sides of this
+                    paragraph.</p>
+            </div>
+        </section>
+
+        <section class="typo-section text-dec-trans">
+            <h2>4. Decoration & Transformation</h2>
+            <p class="dec-underline">Text Decoration: Underline</p>
+            <p class="dec-line-through">Text Decoration: Line-through</p>
+            <p class="dec-overline">Text Decoration: Overline</p>
+            <hr>
+            <p class="trans-uppercase">text transformation: uppercase</p>
+            <p class="trans-lowercase">TEXT TRANSFORMATION: LOWERCASE</p>
+            <p class="trans-capitalize">text transformation: capitalize</p>
+        </section>
+
+        <section class="typo-section text-shadows">
+            <h2>5. Text Shadow Effects</h2>
+            <h3 class="shadow-basic">Basic Shadow</h3>
+            <h3 class="shadow-blur">Blurred Shadow</h3>
+            <h3 class="shadow-glowing">Glowing Text Effect</h3>
+            <h3 class="shadow-3d">3D Text Effect</h3>
+        </section>
+
+        <section class="typo-section text-spacing">
+            <h2>6. Text Spacing & Layout</h2>
+            <p class="line-height-demo"><strong>Line Height:</strong> Proper line height improves readability
+                significantly. It increases the vertical space between lines of text, making it much easier for the eye
+                to track from the end of one line to the beginning of the next line without getting lost.</p>
+            <p class="letter-spacing-demo">Letter spacing (TRACKING)</p>
+            <p class="word-spacing-demo">Word spacing adjust spacing between words</p>
+            <p class="text-indent-demo">Text indenting pushes the first line of a paragraph inward. This is a
+                traditional typographic style often used in print but also sometimes useful on the web.</p>
+            <div class="overflow-demo">
+                This text is too long for its container and will demonstrate text overflow handling with ellipsis.
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

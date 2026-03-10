@@ -1,114 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Weekly Course Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Schedule</title>
+    <!-- Task 12 specific font and styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/schedule.css">
 </head>
+
 <body>
- <header>
-        <h1>Weekly Course Schedule</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="profile.html">About</a>
-            <a href="schedule.html" class="active">Courses</a>
-            <a href="registration.html">Registration</a>
-            <a href="navigation.html">Navigation</a>
-            <a href="https://www.uetpeshawar.edu.pk" target="_blank">UET Website</a>
-        </nav>
-    </header><br>
-<table border="1" cellpadding="10" cellspacing="0">
-    
-    <tr>
-        <th>Time / Day</th>
-        <th>Monday</th>
-        <th>Tuesday</th>
-        <th>Wednesday</th>
-        <th>Thursday</th>
-        <th>Friday</th>
-    </tr>
+    <header class="course-header">
+        <div class="container">
+            <h1>CS 224L Web Technologies</h1>
+            <p>Lab 02 Mock - Course Schedule</p>
+            <a href="index.html" class="btn-back">Back to Lab Index</a>
+        </div>
+    </header>
 
-    <tr>
-        <td>08:00 – 09:50</td>
-        <td>Applied Physics<br>OB-0204</td>
-        <td></td>
-        <td></td>
-        <td>Web Technologies (T)<br>AB-0201</td>
-        <td>Quran Tarjuma & Tafseer</td>
-    </tr>
+    <main class="container">
+        <section class="schedule-section">
+            <h2>Weekly Course Schedule</h2>
+            <div class="table-responsive">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Time</th>
+                            <th>Course Name</th>
+                            <th>Type</th>
+                            <th>Room</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>08:00 AM - 10:00 AM</td>
+                            <td>Web Technologies</td>
+                            <td><span class="badge type-lecture">Lecture</span></td>
+                            <td>Room A301</td>
+                        </tr>
+                        <tr>
+                            <td>Monday</td>
+                            <td>10:00 AM - 01:00 PM</td>
+                            <td>CS 224L Web Tech Lab</td>
+                            <td><span class="badge type-lab">Lab</span></td>
+                            <td>Lab 02</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>09:00 AM - 11:00 AM</td>
+                            <td>Data Structures</td>
+                            <td><span class="badge type-lecture">Lecture</span></td>
+                            <td>Room B102</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>02:00 PM - 05:00 PM</td>
+                            <td>Database Systems Lab</td>
+                            <td><span class="badge type-lab">Lab</span></td>
+                            <td>DB Lab</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>11:00 AM - 12:30 PM</td>
+                            <td>Software Engineering</td>
+                            <td><span class="badge type-tutorial">Tutorial</span></td>
+                            <td>Online</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
 
-    <tr>
-        <td>09:50 – 10:30</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>10:30 – 11:20</td>
-        <td></td>
-        <td>Introduction to Data Science (L)<br>AB-0303</td>
-        <td>Web Technologies (L)<br>AB-0303</td>
-        <td>Operating Systems (T)<br>OB-0207</td>
-        <td>Linear Algebra<br>OB-0205</td>
-    </tr>
-
-    <tr>
-        <td>11:20 – 12:10</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>12:10 – 01:00</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-
-
-    <tr>
-        <td>01:00 – 01:30</td>
-        <td colspan="5" align="center"><strong>Prayer Break</strong></td>
-    </tr>
-
-    <tr>
-        <td>01:30 – 02:20</td>
-        <td>Operating Systems (L)<br>AB-0302</td>
-        <td></td>
-        <td>Artificial Intelligence (T)<br>AB-0201</td>
-        <td>Introduction to Data Science (T)<br>AB-0201</td>
-        <td>Artificial Intelligence (L)<br>AB-0304</td>
-    </tr>
-
-    <tr>
-        <td>02:20 – 03:10</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-
-    <tr>
-        <td>03:10 – 04:00</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-
-</table>
-
-<br>
-
-
+    <footer class="course-footer">
+        <p>Department of Computer Science &copy; 2026</p>
+    </footer>
 </body>
+
 </html>
