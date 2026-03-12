@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&family=Montserrat&display=swap');
+
+.title{
+font-family: 'Lobster', cursive;
+font-size:40px;
+}
+
+.text1{
+font-family:'Roboto';
+font-size:20px;
+}
+
+.text2{
+font-family:'Montserrat';
+font-size:1.5rem;
+}
+
+.center{
+text-align:center;
+}
+
+.upper{
+text-transform:uppercase;
+}
+
+.shadow{
+text-shadow:2px 2px 5px gray;
+}
+
+.spacing{
+line-height:1.8;
+letter-spacing:2px;
+word-spacing:5px;
+}

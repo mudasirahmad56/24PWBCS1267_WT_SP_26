@@ -1,0 +1,35 @@
+.btn{
+padding:10px 20px;
+border:none;
+background:blue;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+.btn:hover{
+background:darkblue;
+}
+
+.card{
+background:white;
+padding:20px;
+margin-top:20px;
+border-radius:10px;
+box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+
+.form input{
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+}
+
+.form input:focus{
+border:2px solid blue;
+}
+
+.disabled{
+background:gray;
+cursor:not-allowed;
+}
