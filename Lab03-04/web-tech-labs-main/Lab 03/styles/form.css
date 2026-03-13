@@ -1,0 +1,4 @@
+.head{text-align: center;}
+.registration{ display:flex; flex-direction:column; width:300px; margin:auto; gap:15px; }
+.registration input, .registration select{ padding:10px; border:2px solid #ccc; border-radius:5px; transition:0.3s; }
+.registration input:focus, .registration select:focus{ border-color:#007bff; outline:none; }

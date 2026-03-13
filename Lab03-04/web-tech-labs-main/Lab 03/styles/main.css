@@ -1,0 +1,23 @@
+p { color: blue; }
+.intro { font-size: 20px; color: green; }
+#heading { color: red; text-align: center; }
+* { font-family: Arial; }
+h1, h2 { background-color: lightgray; }
+
+input[type="text"] { border: 2px solid green; }
+a[href*="google"] { color: red; }
+button[disabled] { background-color: gray; color: white; }
+
+div p { color: purple; }
+ul > li { font-weight: bold; }
+h2 + input { background-color: lightyellow; }
+h2 ~ a { text-decoration: none; }
+
+a:hover { color: orange; }
+a:active { color: black; }
+a:visited { color: purple; }
+li:first-child { color: red; }
+li:nth-child(3) { color: blue; }
+
+p::first-letter { font-size: 25px; color: red; }
+::selection { background: black; color: white; }

@@ -1,0 +1,5 @@
+.head{text-align:center}
+.cards{ display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
+.cards .card{ width:250px; padding:15px; border:1px solid #ccc; border-radius:10px; box-shadow:0 8px 15px rgba(0,0,0,0.2); transition:0.3s; text-align:center; }
+.cards .card img{ width:100%; border-radius:10px; }
+.cards .card:hover{ transform: translateY(-10px); box-shadow:0 12px 20px rgba(0,0,0,0.3); }

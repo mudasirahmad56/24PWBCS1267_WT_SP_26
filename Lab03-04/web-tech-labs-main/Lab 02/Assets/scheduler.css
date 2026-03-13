@@ -1,0 +1,255 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+/* ── Variables ── */
+:root {
+  --ink:    #0d0d0d;
+  --gold:   #c9922a;
+  --rust:   #b83232;
+  --sage:   #3a7a50;
+  --purple: #6b21a8;
+  --blue:   #1d4ed8;
+  --slate:  #475569;
+  --mist:   #e2e8f0;
+  --cream:  #fafaf8;
+}
+
+/* ── Reset ── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+/* ── HEADER ── */
+header {
+  background: var(--ink);
+  color: white;
+  padding: 2.5rem 2rem;
+  border-bottom: 3px solid var(--gold);
+}
+
+header h1 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+header p {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* ── NAV ── */
+nav {
+  background: #1a1a1a;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  border-bottom: 2px solid var(--gold);
+}
+
+nav a {
+  display: block;
+  padding: 0.85rem 0.9rem;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+}
+
+nav a:hover          { color: var(--gold); }
+nav a.active         { color: var(--gold); border-bottom-color: var(--gold); }
+
+/* ── PAGE WRAPPER ── */
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+/* ── LEGEND ── */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.legend-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+/* ── BADGES — color-coded course types ── */
+.badge {
+  display: inline-block;
+  padding: 0.18em 0.6em;
+  border-radius: 3px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+.badge-L  { background: rgba(184,50,50,0.1);  color: var(--rust);   border: 1px solid rgba(184,50,50,0.3);   }
+.badge-T  { background: rgba(201,146,42,0.12); color: #9a6c15;      border: 1px solid rgba(201,146,42,0.35); }
+.badge-La { background: rgba(58,122,80,0.12);  color: var(--sage);  border: 1px solid rgba(58,122,80,0.3);   }
+.badge-G  { background: rgba(29,78,216,0.1);   color: var(--blue);  border: 1px solid rgba(29,78,216,0.25);  }
+.badge-P  { background: rgba(107,33,168,0.1);  color: var(--purple);border: 1px solid rgba(107,33,168,0.25); }
+
+/* ── TABLE WRAPPER (responsive scroll) ── */
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid var(--mist);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+}
+
+/* ── TABLE ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  min-width: 680px;
+}
+
+/* Table header */
+thead tr {
+  background: var(--ink);
+}
+
+thead th {
+  padding: 1rem 1.1rem;
+  text-align: left;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  border-bottom: 2px solid var(--gold);
+  white-space: nowrap;
+}
+
+thead th:first-child { color: var(--gold); }
+
+/* ── ZEBRA STRIPING ── */
+tbody tr:nth-child(odd)  { background: #ffffff; }
+tbody tr:nth-child(even) { background: #f8f8f6; }
+
+/* ── HOVER EFFECT ── */
+tbody tr {
+  transition: background 0.15s ease;
+  cursor: default;
+}
+
+tbody tr:hover {
+  background: rgba(201, 146, 42, 0.1) !important;
+  box-shadow: inset 4px 0 0 var(--gold);
+}
+
+/* ── PRAYER ROW ── */
+.prayer-row { background: rgba(107, 33, 168, 0.04) !important; }
+
+.prayer-row:hover {
+  background: rgba(107, 33, 168, 0.09) !important;
+  box-shadow: inset 4px 0 0 var(--purple) !important;
+}
+
+/* ── TABLE CELLS ── */
+td {
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid var(--mist);
+  vertical-align: top;
+  color: var(--slate);
+  line-height: 1.5;
+}
+
+/* Time column */
+td:first-child {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--slate);
+  white-space: nowrap;
+  border-right: 2px solid var(--mist);
+}
+
+/* Course name */
+.course-name {
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 0.84rem;
+  display: block;
+}
+
+/* Room number */
+.room {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  color: #aaa;
+  margin-top: 0.2rem;
+  display: block;
+  letter-spacing: 0.04em;
+}
+
+/* Empty cells */
+td.empty {
+  color: #ddd;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+/* Prayer center cell */
+.prayer-cell {
+  text-align: center;
+  font-weight: 600;
+  padding: 0.9rem;
+}
+
+/* Remove border on last row */
+tbody tr:last-child td { border-bottom: none; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink);
+  color: rgba(255, 255, 255, 0.35);
+  text-align: center;
+  padding: 1.5rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+  border-top: 2px solid rgba(201, 146, 42, 0.2);
+}
+
+footer strong { color: var(--gold); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  header       { padding: 2rem 1rem; }
+  .wrap        { padding: 1.5rem 0.75rem; }
+  nav a        { padding: 0.7rem 0.55rem; font-size: 0.68rem; }
+}

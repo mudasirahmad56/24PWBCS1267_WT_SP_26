@@ -1,0 +1,6 @@
+.head{text-align:center}
+.transform-box{ width:150px; height:150px; background:#007bff; color:#fff; margin:20px auto; display:flex; align-items:center; justify-content:center; transition:0.5s; border-radius:10px; }
+.rotate:hover{ transform: rotate(45deg); }
+.scale:hover{ transform: scale(1.5); }
+.translate:hover{ transform: translateX(50px) translateY(20px); }
+.skew:hover{ transform: skewX(20deg) skewY(10deg); }

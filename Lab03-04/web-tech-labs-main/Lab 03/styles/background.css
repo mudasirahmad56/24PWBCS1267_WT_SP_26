@@ -1,0 +1,10 @@
+body{ font-family: Arial, sans-serif; text-align:center; margin:20px; }
+div{ height:150px; margin:20px auto; padding:20px; color:white; font-size:20px; display:flex; align-items:center; justify-content:center; border-radius:10px; }
+
+.solid{ background-color:teal; }
+.repeat{ background-image:url("../images/backgrounds/bg.webp"); background-repeat:repeat; }
+.no-repeat{ background-image:url("../images/backgrounds/bg.webp"); background-repeat:no-repeat; background-size:cover; }
+.linear{ background:linear-gradient(to right, red, yellow); color:black; }
+.radial{ background:radial-gradient(circle, blue, white); color:black; }
+.multiple{ background-image: linear-gradient(to right, rgba(255,0,0,0.5), rgba(255,255,0,0.5)), url("../images/backgrounds/bg.webp"); background-size:cover, 100px; background-repeat:no-repeat, repeat; }
+.blend{ background-image:url("../images/backgrounds/bg.webp"); background-color:purple; background-blend-mode:multiply; background-size:cover; }
