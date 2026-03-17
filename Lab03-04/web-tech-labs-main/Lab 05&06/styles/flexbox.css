@@ -1,0 +1,356 @@
+/* Header */
+
+.nav-header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:#333;
+color:white;
+
+padding:15px;
+
+position:relative;
+}
+
+/* Logo */
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+/* Navigation */
+
+.main-nav ul{
+
+display:flex;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.main-nav li{
+position:relative;
+}
+
+.main-nav a{
+
+color:white;
+text-decoration:none;
+padding:10px 15px;
+display:block;
+
+}
+
+/* Dropdown */
+
+.dropdown-menu{
+
+display:none;
+flex-direction:column;
+
+position:absolute;
+top:100%;
+left:0;
+
+background:#444;
+}
+
+.dropdown:hover .dropdown-menu{
+display:flex;
+}
+
+/* Hamburger */
+
+.hamburger{
+
+display:none;
+font-size:26px;
+cursor:pointer;
+}
+
+/* Sidebar */
+
+.container{
+display:flex;
+}
+
+.sidebar-nav{
+
+width:220px;
+background:#f4f4f4;
+padding:20px;
+
+}
+
+.sidebar-nav ul{
+
+list-style:none;
+padding:0;
+}
+
+.sidebar-nav li{
+
+margin-bottom:10px;
+}
+
+.sidebar-nav a{
+
+text-decoration:none;
+color:#333;
+}
+
+/* Content */
+
+.content{
+
+flex:1;
+padding:20px;
+}
+
+/* Mobile Navigation */
+
+#menu-toggle{
+display:none;
+}
+
+/* Responsive */
+
+@media (max-width:768px){
+
+/* Hamburger visible */
+
+.hamburger{
+display:block;
+}
+
+/* Hide nav initially */
+
+.main-nav{
+
+position:absolute;
+top:60px;
+left:0;
+
+width:100%;
+
+background:#333;
+
+transform:translateY(-200%);
+transition:0.3s;
+}
+
+/* Show nav when checked */
+
+#menu-toggle:checked ~ .main-nav{
+
+transform:translateY(0);
+
+}
+
+/* Vertical mobile nav */
+
+.main-nav ul{
+
+flex-direction:column;
+
+}
+
+/* Dropdown stacked */
+
+.dropdown-menu{
+
+position:static;
+
+}
+
+/* Layout stack */
+
+.container{
+
+flex-direction:column;
+}
+
+.sidebar-nav{
+
+width:100%;
+}
+
+}
+/* Flexbox Card Layout */
+
+.title{
+text-align:center;
+margin:30px;
+}
+
+.card-container{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+width:90%;
+margin:auto;
+}
+
+.card{
+display:flex;
+flex-direction:column;
+flex:1 1 calc(33.33% - 20px);
+background:#fff;
+border:1px solid #ccc;
+padding:20px;
+min-height:220px;
+}
+
+.card-actions{
+margin-top:auto;
+}
+
+/* Tablet */
+
+@media (max-width:992px){
+.card{
+flex:1 1 calc(50% - 20px);
+}
+}
+
+/* Mobile */
+
+@media (max-width:600px){
+.card{
+flex:1 1 100%;
+}
+}
+/* Flexbox Holy Grail */
+.holy-flex {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.holy-flex header, .holy-flex footer {
+    background: #f8b400;
+    padding: 20px;
+    text-align: center;
+}
+
+.holy-flex .content-flex {
+    display: flex;
+    flex-direction: column; /* mobile-first stacking */
+}
+
+.holy-flex .left, .holy-flex .right, .holy-flex main {
+    padding: 20px;
+    color: white;
+}
+
+.holy-flex .left { background: #4CAF50; }
+.holy-flex .right { background: #f44336; }
+.holy-flex main { background: #2196F3; }
+
+@media (min-width: 768px) {
+    .holy-flex .content-flex {
+        flex-direction: row;
+    }
+    .holy-flex .left, .holy-flex .right {
+        width: 200px;
+        flex-shrink: 0;
+    }
+    .holy-flex main { flex: 1; }
+}
+/* -----------------------------
+   Responsive Flexbox Form Builder (Task 12)
+------------------------------ */
+
+/* Form Title */
+.form-title {
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* Form Container */
+.flex-form {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Form Sections */
+.form-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.form-section legend {
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Form Groups */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 45%; /* 2-column layout on desktop */
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit Button */
+.form-submit {
+    padding: 15px 30px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+/* -----------------------------
+   Responsive Breakpoints
+------------------------------ */
+
+/* Tablet: 1 column per section */
+@media (max-width: 900px) {
+    .form-group {
+        flex: 1 1 100%;
+    }
+}
+
+/* Mobile: full width stack with smaller padding */
+@media (max-width: 600px) {
+    .flex-form {
+        gap: 20px;
+        padding: 0 10px;
+    }
+    .form-section {
+        gap: 15px;
+        padding: 15px;
+    }
+    .form-group input,
+    .form-group select {
+        padding: 8px;
+    }
+    .form-submit {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,545 @@
+/* Gallery Title */
+
+.gallery-title{
+text-align:center;
+margin:30px;
+}
+
+/* Grid Container */
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+grid-auto-rows:200px;
+
+gap:15px;
+
+width:90%;
+margin:auto;
+
+}
+
+/* Photo Items */
+
+.photo{
+position:relative;
+overflow:hidden;
+}
+
+/* Images */
+
+.photo img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}
+
+/* Masonry Effect */
+
+.photo1{grid-row:span 2;}
+.photo2{grid-row:span 3;}
+.photo3{grid-row:span 2;}
+.photo4{grid-row:span 3;}
+.photo5{grid-row:span 2;}
+.photo6{grid-row:span 2;}
+
+/* Overlay */
+
+.overlay{
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.6);
+
+color:white;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:20px;
+
+opacity:0;
+
+transition:0.3s;
+
+}
+
+/* Hover Effect */
+
+.photo:hover .overlay{
+opacity:1;
+}
+
+/* Tablet */
+
+@media (max-width:900px){
+
+.gallery{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:600px){
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.photo{
+grid-row:span 1;
+}
+
+}
+/* Grid Holy Grail */
+.holy-grid {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "left main right"
+        "footer footer footer";
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.holy-grid header { grid-area: header; background: #f8b400; padding: 20px; text-align: center; }
+.holy-grid footer { grid-area: footer; background: #f8b400; padding: 20px; text-align: center; }
+.holy-grid .left { grid-area: left; background: #4CAF50; color: white; padding: 20px; }
+.holy-grid .right { grid-area: right; background: #f44336; color: white; padding: 20px; }
+.holy-grid main { grid-area: main; background: #2196F3; color: white; padding: 20px; }
+
+@media (max-width: 768px) {
+    .holy-grid {
+        grid-template-areas:
+            "header"
+            "main"
+            "left"
+            "right"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+}
+/* E-commerce Grid Title */
+.ecom-title {
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* Container with sidebar + main grid */
+.ecom-container {
+    display: grid;
+    grid-template-areas:
+        "sidebar main";
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Sidebar */
+.filter-sidebar {
+    grid-area: sidebar;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Product Grid */
+.product-grid {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* desktop default */
+    gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    margin: 10px 0 5px;
+}
+
+.product-card p {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #2196F3;
+}
+
+/* Responsive Breakpoints */
+
+/* Tablet: 2 columns grid, sidebar moves above */
+@media (max-width: 900px) {
+    .ecom-container {
+        grid-template-areas:
+            "sidebar"
+            "main";
+        grid-template-columns: 1fr;
+    }
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: 1 column grid */
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* -----------------------------
+   Dashboard Grid Layout (Task G)
+------------------------------ */
+
+/* Main Container */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: "sidebar main";
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    position: fixed; /* fixed sidebar */
+    height: 100%;
+    width: 250px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    grid-area: main;
+    margin-left: 250px; /* offset for fixed sidebar */
+    padding: 20px;
+}
+
+/* Dashboard Header */
+.dashboard-header h1 {
+    margin-bottom: 20px;
+}
+
+/* Stat Cards */
+.stat-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: #3498db;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 calc(25% - 20px); /* 4 cards per row */
+    text-align: center;
+}
+
+/* Dashboard Widgets */
+.dashboard-widgets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.widget {
+    background: #ecf0f1;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Responsive Breakpoints */
+
+/* Tablet: sidebar collapses, content full width */
+@media (max-width: 900px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "main";
+    }
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .stat-cards {
+        flex-direction: column;
+    }
+    .dashboard-widgets {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile: stat cards & widgets stack */
+@media (max-width: 600px) {
+    .stat-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* -----------------------------
+   Responsive CSS Grid Magazine Layout (Task 11)
+------------------------------ */
+
+/* Title */
+.magazine-title {
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* Magazine Container */
+.magazine-container {
+    display: grid;
+    grid-template-areas:
+        "main sidebar1 sidebar2"
+        "secondary secondary secondary";
+    grid-template-columns: 2fr 1fr 1fr; /* Asymmetric on desktop */
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Articles */
+.main-article {
+    grid-area: main;
+}
+
+.sidebar-article:nth-of-type(1) {
+    grid-area: sidebar1;
+}
+
+.sidebar-article:nth-of-type(2) {
+    grid-area: sidebar2;
+}
+
+.secondary-article {
+    grid-area: secondary;
+}
+
+/* Article Styling */
+.magazine-container article,
+.magazine-container aside {
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.magazine-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.magazine-container h2, 
+.magazine-container h3 {
+    margin: 10px 0;
+}
+
+/* Responsive Breakpoints */
+
+/* Tablet: symmetric 2-column layout */
+@media (max-width: 900px) {
+    .magazine-container {
+        grid-template-areas:
+            "main sidebar1"
+            "main sidebar2"
+            "secondary secondary";
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* Mobile: single column layout */
+@media (max-width: 600px) {
+    .magazine-container {
+        grid-template-areas:
+            "main"
+            "sidebar1"
+            "sidebar2"
+            "secondary";
+        grid-template-columns: 1fr;
+    }
+
+    .magazine-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .magazine-container h3 {
+        font-size: 1.2rem;
+    }
+
+    .magazine-container p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* -----------------------------
+   Portfolio Layout with Mixed Techniques (Task 13)
+------------------------------ */
+
+/* Container */
+.portfolio-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: "sidebar main";
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Sidebar */
+.portfolio-sidebar {
+    grid-area: sidebar;
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.portfolio-sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.portfolio-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.portfolio-sidebar ul li {
+    margin: 10px 0;
+}
+
+/* Main Content */
+.portfolio-main {
+    grid-area: main;
+    position: relative;
+    padding: 0 20px;
+}
+
+/* Decorative Element */
+.decorative-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(52, 152, 219, 0.2);
+    border-radius: 50%;
+    top: -30px;
+    right: -30px;
+    z-index: 1;
+}
+
+/* About Section */
+.about {
+    margin-bottom: 30px;
+}
+
+/* Projects Section */
+.projects h2 {
+    margin-bottom: 20px;
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    flex: 1 1 calc(33% - 20px);
+    background: #ecf0f1;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+}
+
+.project-card p {
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* -----------------------------
+   Responsive Breakpoints
+------------------------------ */
+
+/* Tablet: stack sidebar above main */
+@media (max-width: 900px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "sidebar"
+            "main";
+    }
+
+    .project-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+/* Mobile: single column project cards */
+@media (max-width: 600px) {
+    .project-card {
+        flex: 1 1 100%;
+    }
+
+    .decorative-circle {
+        display: none;
+    }
+}

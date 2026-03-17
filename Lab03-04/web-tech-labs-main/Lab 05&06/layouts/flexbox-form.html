@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Flexbox Form Builder</title>
+
+<link rel="stylesheet" href="../styles/base.css">
+<link rel="stylesheet" href="../styles/flexbox.css">
+</head>
+<body>
+
+<h1 class="form-title">Responsive Flexbox Form</h1>
+
+<form class="flex-form">
+    
+    <!-- Personal Information Section -->
+    <fieldset class="form-section">
+        <legend>Personal Information</legend>
+        <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="Mudasir">
+        </div>
+        <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Ahamd">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="mudasir@example.com">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+92 332 9049150">
+        </div>
+    </fieldset>
+
+    <!-- Address Section -->
+    <fieldset class="form-section">
+        <legend>Address</legend>
+        <div class="form-group">
+            <label for="street">Street</label>
+            <input type="text" id="street" name="street" placeholder="123 Main St">
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="hangu">
+        </div>
+        <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" placeholder="Khyber Pakhtunkhwa">
+        </div>
+        <div class="form-group">
+            <label for="zip">ZIP Code</label>
+            <input type="text" id="zip" name="zip" placeholder="26190">
+        </div>
+    </fieldset>
+
+    <!-- Preferences Section -->
+    <fieldset class="form-section">
+        <legend>Preferences</legend>
+        <div class="form-group">
+            <label for="newsletter">Subscribe to newsletter</label>
+            <input type="checkbox" id="newsletter" name="newsletter">
+        </div>
+        <div class="form-group">
+            <label for="contact-method">Preferred Contact Method</label>
+            <select id="contact-method" name="contact-method">
+                <option>Email</option>
+                <option>Phone</option>
+                <option>SMS</option>
+            </select>
+        </div>
+    </fieldset>
+
+    <button type="submit" class="form-submit">Submit</button>
+</form>
+
+</body>
+</html>

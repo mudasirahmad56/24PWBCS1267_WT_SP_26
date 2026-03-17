@@ -1,0 +1,52 @@
+body{
+font-family: Arial;
+margin:20px;
+}
+
+/* block example */
+.block{
+display:block;
+background:lightblue;
+padding:15px;
+margin:10px 0;
+border:1px solid black;
+}
+
+/* inline example */
+.inline{
+display:inline;
+background:lightgreen;
+padding:10px;
+margin:5px;
+border:1px solid black;
+}
+
+/* inline-block example */
+.inline-block{
+display:inline-block;
+width:120px;
+height:80px;
+background:orange;
+margin:10px;
+text-align:center;
+line-height:80px;
+border:1px solid black;
+}
+
+/* normal box */
+.box{
+background:#ddd;
+padding:15px;
+margin:10px 0;
+border:1px solid black;
+}
+
+/* display none */
+.hidden{
+display:none;
+}
+
+/* visibility hidden */
+.invisible{
+visibility:hidden;
+}

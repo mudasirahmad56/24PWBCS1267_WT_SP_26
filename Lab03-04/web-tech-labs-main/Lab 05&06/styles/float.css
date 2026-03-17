@@ -1,0 +1,131 @@
+/* Container */
+
+.container{
+width:90%;
+margin:auto;
+}
+
+/* Header */
+
+.header{
+background:#333;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+/* Footer */
+
+.footer{
+background:#333;
+color:white;
+text-align:center;
+padding:10px;
+margin-top:20px;
+}
+
+/* Sidebar */
+
+.sidebar{
+float:left;
+width:25%;
+background:#f4f4f4;
+padding:20px;
+}
+
+/* Main Content */
+
+.main{
+float:right;
+width:70%;
+padding:20px;
+}
+
+/* Image Float */
+
+.float-img{
+float:left;
+margin:0 15px 10px 0;
+width:250px;
+}
+
+/* Clearfix */
+
+.clearfix::after{
+content:"";
+display:block;
+clear:both;
+}
+
+/* Sidebar List */
+
+.sidebar ul{
+list-style:none;
+padding:0;
+}
+
+.sidebar li{
+padding:8px 0;
+border-bottom:1px solid #ccc;
+}
+
+/* Responsive Design */
+
+@media (max-width:768px){
+
+.sidebar{
+float:none;
+width:100%;
+}
+
+.main{
+float:none;
+width:100%;
+}
+
+.float-img{
+float:none;
+display:block;
+margin:auto;
+}
+
+}
+/* Float-based Holy Grail */
+.holy-float {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden; /* clearfix */
+}
+
+.holy-float header, .holy-float footer {
+    background: #f8b400;
+    padding: 20px;
+    text-align: center;
+}
+
+.holy-float .left, .holy-float .right {
+    width: 200px;
+    float: left;
+    background: #4CAF50;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.holy-float .right { float: right; }
+
+.holy-float main {
+    margin: 0 220px;
+    background: #2196F3;
+    color: white;
+    padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .holy-float .left, .holy-float .right, .holy-float main {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+}
